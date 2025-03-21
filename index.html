@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeSnap - Beautiful Code Screenshots</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CodeSnap</h1>
+            <p>Create beautiful code screenshots</p>
+        </header>
+        
+        <main>
+            <div class="editor-panel">
+                <div class="controls">
+                    <select id="language">
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                    </select>
+                    <select id="theme">
+                        <option value="monokai">Monokai</option>
+                        <option value="github">GitHub</option>
+                        <option value="dracula">Dracula</option>
+                    </select>
+                </div>
+                
+                <textarea id="code-input" placeholder="Paste your code here..."></textarea>
+            </div>
+            
+            <div class="preview-panel">
+                <div class="code-preview" id="preview">
+                    <div class="window-controls">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <pre><code id="highlighted-code">// Your code will appear here</code></pre>
+                </div>
+                
+                <button id="download-btn">Download PNG</button>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
