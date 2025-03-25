@@ -13,12 +13,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updatePreview() {
         const code = codeInput.value;
+        const language = languageSelect.value;
+        
         if (code.trim() === '') {
-            highlightedCode.textContent = '// Your code will appear here';
+            highlightedCode.innerHTML = '<span class="token comment">// Your code will appear here</span>';
             return;
         }
         
+        highlightedCode.className = `language-${language}`;
         highlightedCode.textContent = code;
+        
+        if (typeof Prism !== 'undefined') {
+            Prism.highlightElement(highlightedCode);
+        }
     }
 
     function updateTheme() {
