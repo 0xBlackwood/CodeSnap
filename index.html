@@ -36,6 +36,12 @@
                         <option value="github">GitHub</option>
                         <option value="dracula">Dracula</option>
                     </select>
+                    <select id="background">
+                        <option value="gradient1">Purple Gradient</option>
+                        <option value="gradient2">Blue Gradient</option>
+                        <option value="gradient3">Orange Gradient</option>
+                        <option value="solid">Solid Color</option>
+                    </select>
                 </div>
                 
                 <textarea id="code-input" placeholder="Paste your code here..."></textarea>
@@ -47,11 +53,15 @@
                         <span class="dot red"></span>
                         <span class="dot yellow"></span>
                         <span class="dot green"></span>
+                        <input type="text" id="window-title" placeholder="Untitled" class="window-title">
                     </div>
                     <pre><code id="highlighted-code">// Your code will appear here</code></pre>
                 </div>
                 
-                <button id="download-btn">Download PNG</button>
+                <div class="action-buttons">
+                    <button id="copy-btn">Copy to Clipboard</button>
+                    <button id="download-btn">Download PNG</button>
+                </div>
             </div>
         </main>
     </div>
@@ -68,6 +78,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
